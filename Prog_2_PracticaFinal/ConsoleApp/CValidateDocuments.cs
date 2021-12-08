@@ -35,9 +35,15 @@ namespace ConsoleApp
                 return false;
         }
 
-        public static void ValidatePassport()
+        public static bool ValidatePassport(string documentPasaporte)
         {
+            string pattern = @"^[A-Z]{2}\d{7}";
+            var validExp = Regex.IsMatch(documentPasaporte, pattern);
 
+            if (documentPasaporte.Length == 9 && validExp)
+                return true;
+            else
+                return false;
         }
 
         #endregion
@@ -101,8 +107,24 @@ namespace ConsoleApp
             }
             else
                 return "Error, Cedula no valido.";
-
         }
+
+
+
+        public static string FormatPasaporte(string documentPasaporte)
+        {
+            //Primero ejecutar la validacion.
+            if (CValidateDocuments.ValidatePassport(documentPasaporte.ToUpper()))
+            {
+                return documentPasaporte.ToUpper();   
+            }
+            else
+                return "Error, Pasaporte no valido o quizas de una nación no registrada.";
+        }
+
+
+
+
 
         #endregion
 
