@@ -18,6 +18,7 @@ namespace DesktopApp
         }
 
         private DateTime _dateSistema;
+        private FormAcercaDe acercaDe;
 
         private void MenuPrincipalMDI_Load(object sender, EventArgs e)
         {
@@ -44,8 +45,31 @@ namespace DesktopApp
             }
 
             this._dateSistema = DateTime.UtcNow.Date;
-            this.toolStripStatusFechaSistema.Text += this._dateSistema.ToString();
+            this.toolStripStatusFechaSistema.Text += this._dateSistema.ToString("d");
 
         }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (acercaDe == null)
+            {
+                acercaDe = new FormAcercaDe();
+                acercaDe.MdiParent = this;
+                acercaDe.FormClosed += new FormClosedEventHandler(CerrarForm); //Delegado
+                acercaDe.Show();
+            }
+            else
+            {
+                acercaDe.Activate();
+            }
+
+        }
+
+
+        private void CerrarForm(object sender, FormClosedEventArgs e)
+        {
+            acercaDe = null;
+        }
+
     }
 }
