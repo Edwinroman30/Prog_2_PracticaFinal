@@ -29,34 +29,36 @@ namespace DesktopApp.LoginForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnIniciarSession = new System.Windows.Forms.Button();
+            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLblCrearCuenta = new System.Windows.Forms.LinkLabel();
             this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnIniciarSession
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(187, 202);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 24);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Iniciar Sessión";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnIniciarSession.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnIniciarSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIniciarSession.ForeColor = System.Drawing.Color.White;
+            this.btnIniciarSession.Location = new System.Drawing.Point(170, 198);
+            this.btnIniciarSession.Name = "btnIniciarSession";
+            this.btnIniciarSession.Size = new System.Drawing.Size(147, 24);
+            this.btnIniciarSession.TabIndex = 2;
+            this.btnIniciarSession.Text = "Iniciar Sessión";
+            this.btnIniciarSession.UseVisualStyleBackColor = false;
+            this.btnIniciarSession.Click += new System.EventHandler(this.btnIniciarSession_Click);
             // 
-            // textBox1
+            // txtNombreUsuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(81, 84);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(329, 25);
-            this.textBox1.TabIndex = 1;
+            this.txtNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreUsuario.Location = new System.Drawing.Point(81, 84);
+            this.txtNombreUsuario.Multiline = true;
+            this.txtNombreUsuario.Name = "txtNombreUsuario";
+            this.txtNombreUsuario.Size = new System.Drawing.Size(329, 25);
+            this.txtNombreUsuario.TabIndex = 0;
             // 
             // label1
             // 
@@ -69,13 +71,15 @@ namespace DesktopApp.LoginForm
             this.label1.TabIndex = 2;
             this.label1.Text = "👤 Nombre de Usuario:";
             // 
-            // textBox2
+            // txtContrasena
             // 
-            this.textBox2.Location = new System.Drawing.Point(81, 144);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(329, 25);
-            this.textBox2.TabIndex = 1;
+            this.txtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasena.Location = new System.Drawing.Point(81, 144);
+            this.txtContrasena.Multiline = true;
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
+            this.txtContrasena.Size = new System.Drawing.Size(329, 25);
+            this.txtContrasena.TabIndex = 1;
             // 
             // label2
             // 
@@ -88,21 +92,22 @@ namespace DesktopApp.LoginForm
             this.label2.TabIndex = 2;
             this.label2.Text = "🗝️ Contraseña:";
             // 
-            // linkLabel1
+            // linkLblCrearCuenta
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.ForeColor = System.Drawing.Color.White;
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(184, 239);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(123, 13);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Crear cuenta de usuario.";
+            this.linkLblCrearCuenta.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.linkLblCrearCuenta.AutoSize = true;
+            this.linkLblCrearCuenta.ForeColor = System.Drawing.Color.White;
+            this.linkLblCrearCuenta.LinkColor = System.Drawing.Color.White;
+            this.linkLblCrearCuenta.Location = new System.Drawing.Point(184, 228);
+            this.linkLblCrearCuenta.Name = "linkLblCrearCuenta";
+            this.linkLblCrearCuenta.Size = new System.Drawing.Size(123, 13);
+            this.linkLblCrearCuenta.TabIndex = 3;
+            this.linkLblCrearCuenta.TabStop = true;
+            this.linkLblCrearCuenta.Text = "Crear cuenta de usuario.";
             // 
             // btnClose
             // 
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -121,12 +126,12 @@ namespace DesktopApp.LoginForm
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(48)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(491, 267);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.linkLblCrearCuenta);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtContrasena);
+            this.Controls.Add(this.txtNombreUsuario);
+            this.Controls.Add(this.btnIniciarSession);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -138,12 +143,12 @@ namespace DesktopApp.LoginForm
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnIniciarSession;
+        private System.Windows.Forms.TextBox txtNombreUsuario;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLblCrearCuenta;
         private System.Windows.Forms.Button btnClose;
     }
 }

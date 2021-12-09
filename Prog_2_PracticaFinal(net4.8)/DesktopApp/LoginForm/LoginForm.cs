@@ -21,5 +21,13 @@ namespace DesktopApp.LoginForm
         {
             Application.Exit();
         }
+
+        private void btnIniciarSession_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtNombreUsuario.Text) || string.IsNullOrEmpty(txtContrasena.Text))
+            {
+                MessageBox.Show("No puede existir campos vacios.");
+            }
+        }
     }
 }
