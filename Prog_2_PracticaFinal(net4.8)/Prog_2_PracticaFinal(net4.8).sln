@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopApp", "DesktopApp\DesktopApp.csproj", "{EBEF64C3-E1E0-4E48-B2D1-5FEFFDD5F855}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{21323130-8892-45EF-A117-90516DC5369E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL Files", "SQL Files", "{FB3115E8-8CED-46B0-8723-656D7912EF72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,10 @@ Global
 		{EBEF64C3-E1E0-4E48-B2D1-5FEFFDD5F855}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBEF64C3-E1E0-4E48-B2D1-5FEFFDD5F855}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBEF64C3-E1E0-4E48-B2D1-5FEFFDD5F855}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21323130-8892-45EF-A117-90516DC5369E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21323130-8892-45EF-A117-90516DC5369E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21323130-8892-45EF-A117-90516DC5369E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21323130-8892-45EF-A117-90516DC5369E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

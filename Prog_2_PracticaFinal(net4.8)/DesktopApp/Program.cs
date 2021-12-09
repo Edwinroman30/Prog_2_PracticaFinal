@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DesktopApp.SplashScreen;
 
 namespace DesktopApp
 {
@@ -17,7 +16,8 @@ namespace DesktopApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuPrincipalMDI());
+            Application.Run(new SplashScreen.SplashScreen());
+            Application.Run(new LoginForm.LoginForm());
         }
     }
 }
